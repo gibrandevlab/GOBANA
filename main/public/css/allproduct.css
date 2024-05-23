@@ -1,0 +1,152 @@
+body {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: 0;
+    text-transform: capitalize;
+    padding: 0;
+}
+
+.headerallproduct {
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    color: rgb(219, 136, 150);
+    background-color: whitesmoke;
+    margin: 7%;
+    margin-bottom: 3%;
+    font-weight: 600;
+    border-radius: 3px;
+    letter-spacing: 1.5px;
+    box-shadow: 0px 1px 3px rgb(151, 103, 111);
+    box-shadow: rgb(31, 28, 28);
+    border-bottom: 6px solid rgb(219, 136, 150);
+}
+
+.wrapallproduct {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+
+.allproductcontainer {
+    cursor: pointer;
+    width: 100%;
+    margin: 7%;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px 15px;
+    
+}
+.allproductcontainer a {
+    text-decoration: none; /* Menghapus garis bawah */
+    color: inherit; /* Menggunakan warna teks dari elemen induk */
+    background-color: transparent; /* Menghapus warna latar belakang */
+    border: none; /* Menghapus border */
+    padding: 0; /* Menghapus padding */
+    margin: 0; /* Menghapus margin */
+}
+
+
+.itemproduct {
+
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    transition: transform 0.3s ease, border 0.3s ease;
+    /* Added transition for smooth animation */
+    display: grid;
+    grid-template-areas: "image image"
+    "image image"
+        "title title"
+        "price price"
+        "stok terjual"
+        "button button";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.1fr 0.01fr;
+}
+
+.itemproduct:hover {
+
+    transform: translateY(-15px);
+    
+    border: 1.5px solid rgb(219, 136, 150);
+
+}
+
+.itemproduct img {
+    grid-area: image;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.itemproduct h3{
+    padding: 5px 0;
+    font-size: 15px;
+    grid-area: title;
+    text-align: center;
+    
+}
+.itemproduct p{
+    text-align: center;
+}
+.itemproduct .price{
+    grid-area: price;
+    color: rgb(255, 128, 149);
+    font-weight: 600;
+}
+.itemproduct .stok{
+    grid-area: stok;
+    font-size: 13px;
+    color:#b9b7b7;
+}
+.itemproduct .sell{
+    grid-area: terjual;
+    font-size: 13px;
+    color:#b9b7b7;
+}
+.itemproduct .button{
+    display: none;
+    color: white;
+    grid-area: button;
+    font-weight: 600;
+    padding: 5px 40px;
+    justify-items: center;
+    text-align: center;
+    background-color: rgb(255, 128, 149);
+}
+.itemproduct:hover .button{
+    transform: translateY(50px);
+    display: block;
+}

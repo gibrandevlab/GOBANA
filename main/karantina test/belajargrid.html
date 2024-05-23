@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>GRID</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            font-family: arial;
+            
+        }
+
+        .content {
+            display: grid;
+            margin: 3%;
+            border: 2px solid green;
+            padding: 5px;
+            display: grid;
+            grid-template-areas: "header header" "aside main" "nav main" "footer footer";
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-rows: 1fr 1fr 2fr 0.5fr;
+        }
+
+        header {
+           grid-area: header; 
+            background-color: red;
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-area: aside;
+            background-color: blue;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-area: nav;
+            background-color: purple;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-area: main;
+            background-color: black;
+        }
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-area: footer;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+</html>
+
+<body>
+    <div class="content">
+        <header>header</header>
+        <aside>asider</aside>
+        <nav>Nav</nav>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+
+</body>

@@ -1,0 +1,324 @@
+<html>
+
+<head>
+    <title>form pembelian</title>
+    <style>
+        body {
+            background-color: rgb(236, 236, 236);
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-transform: capitalize;
+        }
+
+        .style {
+            background-image: repeating-linear-gradient(45deg, #6fa6d6, #6fa6d6 33px, transparent 0, transparent 41px, #f18d9b 0, #f18d9b 74px, transparent 0, transparent 82px);
+            background-position-x: -30px;
+            background-size: 116px 3px;
+            height: 3%;
+            width: 100%;
+        }
+
+        .utama {
+            margin: 3% 10%;
+            display: grid;
+            grid-template-areas: "alamat" "detail" "harga";
+            grid-template-rows: 2fr 1.5fr 3fr;
+        }
+
+        .alamat {
+            grid-area: alamat;
+            padding: 50px;
+            background-color: white;
+            
+            border: 2px solid rgb(210, 210, 210);
+            border-radius: 10px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .09);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        .alamat img {
+            width: 44px;
+        }
+
+        .alamat h2 {
+            color: rgb(219, 136, 150);
+        }
+
+        input {
+            text-transform: capitalize;
+        }
+
+        :root {
+            --primary: #11998e;
+            --secondary: #38ef7d;
+            --white: #fff;
+            --gray: #9b9b9b;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .wrap2 {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        .form__group {
+            grid-area: nama;
+            position: relative;
+            padding: 15px 0 0;
+            margin-top: 10px;
+            width: 70%;
+
+        }
+
+        .form__group2 {
+            grid-area: nama;
+            position: relative;
+            padding: 15px 0 0;
+            margin-top: 10px;
+            width: 30%;
+
+        }
+
+        .form__group3 {
+            grid-area: nama;
+            position: relative;
+            padding: 15px 0 0;
+            margin-top: 10px;
+            width: 100%;
+
+        }
+
+        .form__field {
+            font-family: inherit;
+            width: 100%;
+            border: 0;
+            border-bottom: 2px solid var(--gray);
+            outline: 0;
+            font-size: 1.3rem;
+            color: var(--white);
+            padding: 7px 0;
+            background: transparent;
+            transition: border-color 0.2s;
+            color: black;
+        }
+
+        .form__field::placeholder {
+            color: transparent;
+        }
+
+        .form__field:placeholder-shown~.form__label {
+            font-size: 1.3rem;
+            cursor: text;
+            width: 300%;
+            top: 20px;
+        }
+
+        .form__label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: 0.2s;
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        .form__field:focus~.form__label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: 0.2s;
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .form__field:focus {
+            padding-bottom: 6px;
+            font-weight: 700;
+            border-width: 3px;
+            border-image: linear-gradient(to right, var(--primary), var(--secondary));
+            border-image-slice: 1;
+        }
+
+        .form__field:required,
+        .form__field:invalid {
+            box-shadow: none;
+        }
+
+        .detail {
+            margin-top: 10px;
+            padding: 50px;
+            background-color: white;
+            border: 2px solid rgb(210, 210, 210);
+            border-radius: 10px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .09);
+            display: grid;
+            grid-template-areas:
+                "headerdetail" "contentdetail";
+            grid-template-rows: 1fr 2fr;
+        }
+
+        .wrap-header {
+            grid-area: headerdetail;
+            display: grid;
+            grid-template-areas:
+                "header1 header2 header3 header4";
+            grid-template-columns: 3fr 1.5fr 1fr 1.5fr;
+            align-items: center;
+        }
+
+        .damdwf1 {
+            grid-area: header1;
+            text-align: left;
+        }
+
+        .efwn2o {
+            grid-area: header2;
+            text-align: center;
+            color: gray;
+            font-size: 13, 28px;
+        }
+
+        .awda2 {
+            grid-area: header3;
+            text-align: center;
+            color: gray;
+            font-size: 13, 28px;
+        }
+
+        .adawdq2 {
+            grid-area: header4;
+            text-align: center;
+            color: gray;
+            font-size: 13, 28px;
+        }
+
+        .contentdetail {
+            grid-area: contentdetail;
+            display: grid;
+            grid-template-areas:
+                "c1 c2 c3 c4";
+            grid-template-columns: 3fr 1.5fr 1fr 1.5fr;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrapleftdetail {
+            grid-area: c1;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            max-width: 100%;
+            /* Membatasi lebar elemen agar tidak melebihi area grid */
+        }
+.wrapleftdetail h5{
+    width: 500px;
+}
+        .wrapleftdetail img {
+            width: 100px;
+            height: 100px;
+            /* Make the image cover the entire container */
+            object-fit: cover;
+            /* Ensure the image covers the container without distortion */
+        }
+
+        .fnaejf9 {
+            grid-area: c2;
+            text-align: left;
+            color: black;
+            font-size: 13, 28px;
+        }
+
+        .p3r20rom {
+            grid-area: c3;
+            text-align: center;
+            color: black;
+            font-size: 13, 28px;
+        }
+
+        .f3wif93 {
+            grid-area: c4;
+            text-align: center;
+            color: black;
+            font-size: 13, 28px;
+        }
+
+        .harga {
+            margin-top: 10px;
+            grid-area: harga;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header1">Pusat Bantuan</div>
+        <div class="header2">Ikuti Kami di</div>
+    </header>
+    <div class="utama">
+
+        <div class="alamat">
+            <header>
+                <img src="image/icon/lokasi.png">
+                <h2>Lokasi Pengiriman</h2>
+            </header>
+            <div class="wrap">
+                <div class="wrap2">
+                    <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Nama Penerima" name="name" id='name'
+                            required />
+                        <label for="name" class="form__label">Nama Penerima</label>
+                    </div>
+                    <div class="form__group2">
+                        <input type="number" class="form__field" placeholder="Nomor Telepon" name="name" id='name'
+                            required />
+                        <label for="name" class="form__label">Nomor Telepon</label>
+                    </div>
+                </div>
+                <div class="form__group3 field">
+                    <input type="input" class="form__field" placeholder="Alamat" name="name" id='name' required />
+                    <label for="name" class="form__label">Alamat</label>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="wrap-header">
+                <div class="damdwf1"></div>
+                <h5 class="damdwf1">produk Dipesan</h5>
+                
+                <div class="efwn2o">Harga Satuan</div>
+                <div class="awda2">Jumlah</div>
+                <div class="adawdq2">Subtotal Produk</div>
+            </div>
+            <div class="contentdetail">
+                <div class="wrapleftdetail">
+                    <img src="image/papan.jpg">
+                    <h5>bunga
+
+                    </h5>
+                </div>
+                <div class="fnaejf9">Rp. 10.000</div>
+                <div class="p3r20rom">2</div>
+                <div class="f3wif93">Rp. 20.000</div>
+            </div>
+        </div>
+
+        <div class="harga">harga</div>
+
+    </div>
+</body>
+
+</html>

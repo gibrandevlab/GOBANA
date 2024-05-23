@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+
+body {
+    background-color: #f4f4f4;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    width: 20%;
+    padding: 10px;
+    margin: 7%;
+    border-radius: 6px;
+    overflow: hidden;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    z-index: 9999; /* ensure it's on top of everything */
+  }
+.box.intro {
+    height: calc(100%);
+    height: 100vh;
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.box.intro video {
+    width: calc(100%);
+    height: calc(100%);
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.box.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+header.intro.image {
+    margin-left: 7%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    z-index: 1;
+    height: auto;
+    width: calc(100%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    background-attachment: fixed;
+}
+
+.text {
+    padding-left: 10%;
+    color: white;
+    z-index: 1;
+    text-align: justify;
+    letter-spacing: 1px;
+    padding-right: 7%;
+}
+
+nav {
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3.5%;
+    background-color: rgb(219, 136, 150);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    margin-right: 20px;
+  }
+  
+  ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  ul li img{
+    width: calc(3%);
+  }
+  ul li a:hover {
+    color: lightgreen;
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .checkbtn {
+      display: block;
+      order: 1;
+      margin-right: 20px;
+    }
+  
+    ul {
+      position: fixed;
+      top: 80px;
+      right: -100%;
+      background-color: green;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+    }
+  
+    ul li {
+      margin: 20px 0;
+    }
+  
+    ul li a {
+      font-size: 20px;
+    }
+    ul
+  
+    #check:checked ~ ul {
+      right: 0;
+    }
+  }
+
+
+.tester {
+   margin: 7%;
+    z-index: 1;
+    color: red;
+    display: grid;
+    grid-template-areas: "gambargok info";
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.tester img {
+    
+    grid-area: gambargok;
+    width: 100%;
+    height: auto;
+    padding: 3px;
+}
+
+.tester p{
+    font-size: calc(100%);
+}
+
+.tester .info {
+    grid-area: info;
+    overflow: auto;
+}
+
+
+@media screen and (max-width: 800px) {
+    .tester {
+        grid-template-areas: 
+            "gambargok"
+            "info";
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            padding: 50px;
+    }
+    .tester img {
+        grid-area: gambargok;
+        width: 100%;
+        height: auto;
+        padding: 3px;
+        justify-self: center;
+    
+    }
+    .tester p{
+        font-size: calc(70%);
+    }
+    .box.intro video {
+        width: calc(100%);
+        height: calc(100%);
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+}
+
+.p {
+    color: black;
+}
+
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.center-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 35px;
+}
+
+.grid-content {
+    margin: 7%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    max-width: 1296px;
+    width: 100%;
+}
+
+.grid-item {
+
+    position: relative;
+    border-radius: 6px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 3;
+    transform: scale(0.85);
+}
+
+.grid-item a>p {
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    z-index: 4;
+    font-size: 18px;
+    bottom: -30px;
+    text-align: center;
+    width: 100%;
+    font-family: 'playfair display';
+}
+
+.grid-item:hover img {
+    transform: scale(1);
+    /* Mengembalikan skala gambar ke ukuran normal saat dihover */
+}
+
+.grid-item:hover a>p {
+    color: pink;
+    /* Menggeser teks ke atas saat dihover */
+}
+
+
+
+.ask {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+.ask:hover {
+    color: pink;
+    font-size: 42px;
+}
+
+
+.top-grid-content {
+    margin: 7%;
+}
+
+.top-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Menyesuaikan kolom secara horizontal */
+    gap: 30px;
+    max-width: 1296px;
+    width: 100%;
+    grid-auto-rows: minmax(150px, auto); /* Menyesuaikan baris secara vertikal */
+    grid-auto-flow: dense; /* Memungkinkan item untuk menempati ruang yang tersedia */
+}
+
+.top-grid-item {
+    width: 100%;
+    position: relative;
+    border-radius: 6px;
+    height: 400px; /* Atur tinggi yang diinginkan */
+    margin-bottom: 30%;
+}
+
+.top-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mengisi konten tanpa merubah rasio aspek */
+    display: block;
+    position: relative;
+    z-index: 3;
+    transform: scale(0.85);
+    border-radius: 7px;
+}
+
+
+.top-grid-item a>p {
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    z-index: 4;
+    font-size: 18px;
+    bottom: -30px;
+    text-align: left;
+    margin-left: 7%;
+    width: 100%;
+    font-family: 'playfair display';
+}
+
+.top-grid-item a>span {
+    color: rgb(239, 167, 125);
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    z-index: 4;
+    font-size: 16px;
+    bottom: -55px;
+    text-align: left;
+    width: 100%;
+    margin-left: 7%;
+    font-family: 'playfair display';
+    display: flex;
+}
+
+.top-grid-item a > span.diskon {
+    color: rgb(147, 145, 143);
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    z-index: 4;
+    font-size: 16 px;
+    left: 130px;
+    margin-left: 7%;
+    text-align: left;
+    width: 100%;
+    font-family: 'playfair display';
+    text-decoration: line-through;
+}
+
+.top-grid-item:hover {
+    /* kode lainnya */
+    transform: scale(1.05); /* menambahkan transformasi untuk memperbesar sebesar 12% */
+}
+
+

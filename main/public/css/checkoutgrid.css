@@ -1,0 +1,340 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(236, 236, 236);
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+}
+
+.smallnavbar {
+    padding: 10px 0;
+    background-color: green;
+    grid-template-areas: "left1 center right";
+    grid-template-columns: 1fr 2.5fr 2.5fr;
+    text-transform: none;
+    border: 1px solid black;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .09);
+}
+
+.smallnavbar .header {
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 10%;
+    grid-area: left1;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+}
+
+.smallnavbar .header .header0:hover {
+    color: rgb(219, 136, 150);
+    cursor: pointer;
+}
+
+.smallnavbar .header img {
+    width: 20px;
+    padding: 0 10px;
+    
+}
+
+.style {
+    background-image: repeating-linear-gradient(45deg, #6fa6d6, #6fa6d6 33px, transparent 0, transparent 41px, #f18d9b 0, #f18d9b 74px, transparent 0, transparent 82px);
+    background-position-x: -30px;
+    background-size: 116px 3px;
+    height: 3%;
+    width: 100%;
+}
+
+.utama {
+    margin: 3% 10%;
+    display: grid;
+    grid-template-areas: "alamat" "detail" "pesan" "harga";
+    grid-template-rows: 1fr 1fr 0.8fr 3fr;
+}
+
+.alamat {
+    grid-area: alamat;
+    padding: 50px;
+    background-color: white;
+    border: 2px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .09);
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.alamat img {
+    width: 44px;
+}
+
+.alamat h2 {
+    color: rgb(219, 136, 150);
+}
+
+input {
+    text-transform: capitalize;
+}
+
+:root {
+    --primary: #11998e;
+    --secondary: #38ef7d;
+    --white: #fff;
+    --gray: #9b9b9b;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.wrap2 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.form__group {
+    grid-area: nama;
+    position: relative;
+    padding: 18px 0 0;
+    margin-top: 10px;
+    width: 70%;
+
+}
+
+.form__group2 {
+    grid-area: nama;
+    position: relative;
+    padding: 18px 0 0;
+    margin-top: 10px;
+    width: 30%;
+
+}
+
+.form__group3 {
+    grid-area: nama;
+    position: relative;
+    padding: 18px 0 0;
+    margin-top: 10px;
+    width: 100%;
+
+}
+
+.form__field {
+    font-family: inherit;
+    cursor: pointer;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--gray);
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--white);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    color: black;
+}
+
+.form__field::placeholder {
+    color: transparent;
+    cursor: pointer;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    width: 300%;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, var(--primary), var(--secondary));
+    border-image-slice: 1;
+}
+
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+.detail {
+    margin-top: 10px;
+    padding: 50px;
+    background-color: white;
+    border: 2px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .09);
+    display: grid;
+    grid-template-areas:
+        "namapesanan namapesanan hargasatuan jumlah subtotal"
+        "namapesanan1 namapesanan1 hargasatuan3 jumlah4 subtotal5";
+    grid-template-columns: 2.5fr 1fr 1.3fr 1fr 1.3fr;
+    grid-template-rows: 1fr 2.5fr;
+    justify-content: center;
+    text-align: center;
+}
+
+.o10sd {
+    grid-area: namapesanan;
+    font-size: 18px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.iasc9 {
+    padding: 0 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    grid-area: hargasatuan;
+    text-align: center;
+}
+
+.fe2aws {
+    grid-area: jumlah;
+    padding: 0 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.l0q2ez {
+    grid-area: subtotal;
+    padding: 0 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.wrap_gambar_nama {
+    grid-area: namapesanan1;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.detail img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+}
+
+.judulpesanan {
+    grid-area: namapesanan1;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    padding-right: 250px;
+}
+
+
+.hargasatuan {
+    padding: 0 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    grid-area: hargasatuan3;
+    background-color: #ffffff;
+    text-align: center;
+    align-items: center;
+}
+
+.gfja84w09 {
+    padding: 0 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    grid-area: jumlah4;
+    background-color: #ffffff;
+    text-align: center;
+    align-items: center;
+}
+
+.fuf3o8ru {
+    padding: 0 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    grid-area: subtotal5;
+    background-color: #ffffff;
+    text-align: center;
+    align-items: center;
+}
+
+.pesan {
+    margin-top: 10px;
+    padding: 50px;
+    background-color: white;
+    border: 2px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .09);
+    display: grid;
+
+    
+}
+.komenpesan{
+
+    font-size: 15px;
+    font-weight: 600;
+}
+#comment {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    border: 2px solid rgb(219, 136, 150);;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    justify-content: center;
+}
+.harga {
+    margin-top: 10px;
+    grid-area: harga;
+    background-color: orange;
+
+}

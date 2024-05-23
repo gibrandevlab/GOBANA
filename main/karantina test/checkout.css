@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.checkoutform {
+    margin: 7%;
+
+}
+.checkoutform .topalamat {
+    background-image: repeating-linear-gradient(45deg, #6fa6d6, #6fa6d6 33px, transparent 0, transparent 41px, #f18d9b 0, #f18d9b 74px, transparent 0, transparent 82px);
+    background-position-x: -30px;
+    background-size: 116px 3px;
+    height: 3%;
+    width: 100%;
+}
+.alamat {
+    margin-bottom: 0;
+    background: white;
+}
+
+.vtr {
+    display: flex;
+    align-items: center;
+}
+
+.vtr img {
+    width: 30px;
+    margin-top: 2px;
+    margin-left: 5%;
+}
+
+.vtr h2 {
+    width: 30px;
+    top: 15px;
+    margin-left: 1%;
+    flex-grow: 1;
+    color: rgb(219, 136, 150);
+}
+
+.userdata {
+    display: flex;
+    align-items: center;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+
+.userdata .nomor,
+.userdata .rumah {
+    margin-bottom: 15px;
+   margin-right: 3%;
+    /* Adjust margin between containers */
+}
+
+.userdata h5 {
+    margin-bottom: 5px;
+}
+
+.userdata input[type="number"],
+.userdata input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+}
+.userdata input[type="number"] {
+    padding: 10px;
+    width: 200px;
+}
+
+.userdata input[type="text"] {
+padding: 10px;
+padding-right: 0px;
+    width: 830px;
+}
+
+.variati {
+    border-bottom: 1px dashed rgba(0, 0, 0, .09);
+    padding-bottom: 20px;
+}
+
+.wrap_var {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .09);
+}
