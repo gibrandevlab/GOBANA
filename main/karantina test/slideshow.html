@@ -1,0 +1,90 @@
+<div id="slideshow">
+    <div class="container">
+        <section><img src="../public/assets/images/baket.webp" alt="Slide 1"></section>
+        <section><img src="../public/assets/images/bloomflower.jpeg" alt="Slide 2"></section>
+        <section><img src="../public/assets/images/buketbunga2.jpeg" alt="Slide 3"></section>
+        <section><img src="../public/assets/images/papan.webp" alt="Slide 4"></section>
+    </div>
+</div>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+    }
+    #slideshow {
+    width: 1200px;
+    height: 400px; /* Set the height for the slideshow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 3000px; /* 300 x 5 (4 slides + 1 additional step for smooth transition) */
+    position: relative;
+    display: flex;
+    -webkit-animation: slide 10s ease-in-out infinite;
+    -moz-animation: slide 10s ease-in-out infinite;
+    -ms-animation: slide 10s ease-in-out infinite;
+    -o-animation: slide 10s ease-in-out infinite;
+    animation: slide 10s ease-in-out infinite;
+}
+
+.container section {
+    width: 1200px;
+    height: 400px;
+    flex-shrink: 0;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+@-webkit-keyframes slide {
+    0% {left:0;}
+    25% {left:-600px;}
+    50% {left:-1200px;}
+    75% {left:-1500px;}
+    100% {left:0;}
+}
+@-moz-keyframes slide {
+    0% {left:0;}
+    25% {left:-600px;}
+    50% {left:-1200px;}
+    75% {left:-1500px;}
+    100% {left:0;}
+}
+@-ms-keyframes slide {
+    0% {left:0;}
+    25% {left:-600px;}
+    50% {left:-1200px;}
+    75% {left:-1500px;}
+    100% {left:0;}
+}
+@-o-keyframes slide {
+    0% {left:0;}
+    25% {left:-600px;}
+    50% {left:-1200px;}
+    75% {left:-1500px;}
+    100% {left:0;}
+}
+@keyframes slide {
+    0% {left:0;}
+    25% {left:-600px;}
+    50% {left:-1200px;}
+    75% {left:-1500px;}
+    100% {left:0;}
+}
+</style>
+
+

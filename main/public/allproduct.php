@@ -1,7 +1,7 @@
 <?php
 include '../model/database/conn.php';
 
-$sql = "SELECT `id`, `nama_produk`, `harga_jual`, `harga_diskon`, `sub_kategori`, `stok`, `j_view`, `j_beli`, `gambar` FROM product ORDER BY `j_beli` DESC, `stok` DESC";
+$sql = "SELECT `id`, `nama_produk`, `harga_jual`, `harga_diskon`, `sub_kategori`, `stok`, `j_view`, `j_beli`, `gambar` FROM product ORDER BY `j_beli` DESC, `stok` LIMIT 6";
 $result = $conn->query($sql);
 $ids = [];
 $products = [];
@@ -22,7 +22,8 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Grid</title>
+    <title>GOBANA</title>
+    <link rel="icon" href="assets/icon/logoheader.png">
     <link rel="stylesheet" href="css/allproduct.css">
 </head>
 
@@ -31,9 +32,9 @@ $conn->close();
     $Allproduct='
     <div class="container">
         <div class="headerallproduct">REKOMENDASI</div>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari produk...">
-        </div>
+        <!-- <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Cari produk..." disabled>
+        </div> -->
         <div class="wrapallproduct">
             <div class="allproductcontainer" id="productContainer">';
                 if (!empty($products)) {
@@ -50,6 +51,7 @@ $conn->close();
                                 <div class="button">Pesan Produk</div>
                             </div>
                         </a>
+                        
                         ';
                     }
                 } else {
@@ -57,10 +59,13 @@ $conn->close();
                 }
             $Allproduct .= '
             </div>
-        </div>
+        
+        
     </div>
     <script src="script/allproductscript.js"></script>';
     
     ?>
 </body>
 </html>
+</html>
+
